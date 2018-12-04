@@ -1,0 +1,19 @@
+<!--pages/express/express.wxml-->
+<view class="container">
+
+  <picker bindchange="bindPickerChange" value="{{comIndex}}" range="{{comArray}}">
+    <view class="picker">
+      快递公司：{{comArray[comIndex]}}
+    </view>
+  </picker>
+  <input placeholder="请输入快递单号" bindinput='input' focus="{{focus}}" />
+
+  <button type="primary" bindtap='btnClick'> 查询 </button>
+
+  <scroll-view scroll-y="true" style="height: 200px">
+    <view wx:for="{{expressInfo.result.list}}">
+      {{item.remark}}【 {{item.datetime}} 】
+    </view>
+  </scroll-view>
+
+</view>

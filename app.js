@@ -35,5 +35,20 @@ App({
   },
   globalData: {
     userInfo: null
-  }
+  },
+  getExpressInfo: function (com, no, cb) {
+    wx.request({
+      url: 'http://v.juhe.cn/exp/index?key=1d2b321070736acbd48fa19797ae7023&com=' + com + '&no=' + no,
+      data: {
+        x: '',
+        y: ''
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
+        cb(res.data)
+      }
+    })
+  },
 })
