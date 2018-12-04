@@ -1,13 +1,37 @@
 {
-  "pages":[
-    "pages/express/express",
+  "pages": [
     "pages/index/index",
+    "pages/express/express",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "四喜王的饲养攻略",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#2c2c2c",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/images/home.png",
+        "selectedIconPath": "pages/images/home1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/express/express",
+        "iconPath": "pages/images/express.png",
+        "selectedIconPath": "pages/images/express1.png",
+        "text": "快递"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "iconPath": "pages/images/logs.png",
+        "selectedIconPath": "pages/images/logs1.png",
+        "text": "日志"
+      }
+    ]
   }
 }
